@@ -3,6 +3,7 @@
 
 #include "base.h"
 #include "handle.h"
+#include "symbol.h"
 #include <iostream>
 using namespace std;
 

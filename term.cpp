@@ -1,6 +1,7 @@
 #include "term.h"
 #include "base.h"
 #include "handle.h"
+#include "symbol.h"
 #include <iostream>
 using namespace std;
 
@@ -25,4 +26,14 @@ double Term::eval() const {
         return left.eval() / right.eval();
 }
 
-void Term::subst(char, const Handle&) {}
+void Term::subst(char c, const Handle& h) {
+    if (left.type() == SYMBOL && ((Symbol*)left.p)->sym == c)
+        left = h;
+    else
+        left.subst(c, h);
+
+    if (right.type() == SYMBOL && ((Symbol*)right.p)->sym == c)
+        right = h;
+    else
+        right.subst(c, h);
+}
