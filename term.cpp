@@ -5,7 +5,10 @@
 #include <iostream>
 using namespace std;
 
-Term::Term(char _op, Handle _left, Handle _right): op(_op), left(_left), right(_right) {}
+Term::Term(char _op, Handle _left, Handle _right): 
+           Base(), op(_op), left(_left), right(_right) {
+    type = TERM;
+}
 
 void Term::print(ostream& o) const {
     o << "(";
