@@ -1,8 +1,9 @@
-#include <iostream>
 #include "handle.h"
 #include "base.h"
 #include "symbol.h"
 #include "term.h"
+#include <iostream>
+using namespace std;
 
 Handle::Handle(Base* _p): p(_p) {}
 

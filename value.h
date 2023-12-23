@@ -9,9 +9,9 @@ public:
     Value(double);
     void print(ostream&) const;
     double eval() const;
-    double val;
-    
 	void subst(char, const Handle&);
+    
+    double val;
 };
 
 #endif // _VALUE_H_

@@ -11,17 +11,18 @@ public:
 	Expr(const Expr&);
 	Expr(double);
 	Expr(char);
-	Expr& operator= (const Expr&);
-	Expr operator+ (const Expr&) const;
-	Expr operator- (const Expr&) const;
-	Expr operator* (const Expr&) const;
-	Expr operator/ (const Expr&) const;
+	Expr& operator=(const Expr&);
+	Expr operator+(const Expr&) const;
+	Expr operator-(const Expr&) const;
+	Expr operator*(const Expr&) const;
+	Expr operator/(const Expr&) const;
 	void subst(char, const Expr&);
 	double eval() const;
-	friend ostream& operator<< (ostream&, const Expr&);
+	friend ostream& operator<<(ostream&, const Expr&);
+	
 	Handle h;
 };
 
-ostream& operator<< (ostream&, const Expr&);
+ostream& operator<<(ostream&, const Expr&);
 
 #endif // _EXPR_H_

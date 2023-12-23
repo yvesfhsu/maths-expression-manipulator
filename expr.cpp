@@ -1,10 +1,10 @@
-#include <iostream>
 #include "expr.h"
 #include "base.h"
 #include "handle.h"
 #include "value.h"
 #include "symbol.h"
 #include "term.h"
+#include <iostream>
 using namespace std;
 
 Expr::Expr(Handle _h): h(_h) {}
@@ -48,4 +48,3 @@ ostream& operator<< (ostream& o, const Expr& e) {
     e.h.print(o);
     return o;
 }
-

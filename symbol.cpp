@@ -1,6 +1,6 @@
-#include <iostream>
 #include "symbol.h"
 #include "base.h"
+#include <iostream>
 using namespace std;
 
 Symbol::Symbol(char _sym): Base(), sym(_sym) {

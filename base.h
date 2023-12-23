@@ -13,13 +13,6 @@ enum TYPE {
 class Handle;
 
 class Base {
-
-protected:
-	// Constructor (default)
-	Base();
-	// Copy assignment operator
-	Base& operator= (const Base&);
-
 public:
 	// Virtual destructor
 	virtual ~Base() {}
@@ -27,9 +20,16 @@ public:
 	virtual void print(ostream&) const = 0;
 	virtual double eval() const = 0;
 	virtual void subst(char, const Handle&) = 0;
+
 	// Data member
 	int use;
 	TYPE type;
+
+protected:
+	// Constructor (default)
+	Base();
+	// Copy assignment operator
+	Base& operator=(const Base&);
 };
 
 #endif // _BASE_H_

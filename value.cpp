@@ -1,6 +1,6 @@
-#include <iostream>
 #include "value.h"
 #include "base.h"
+#include <iostream>
 using namespace std;
 
 Value::Value(double _val): Base(), val(_val) {
