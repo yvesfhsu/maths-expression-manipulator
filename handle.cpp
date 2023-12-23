@@ -1,6 +1,8 @@
 #include <iostream>
 #include "handle.h"
 #include "base.h"
+#include "symbol.h"
+#include "term.h"
 
 Handle::Handle(Base* _p): p(_p) {}
 
@@ -33,4 +35,9 @@ TYPE Handle::type() const {
     return p->type;
 }
 
-void Handle::subst(char, const Handle&) {}
+void Handle::subst(char c, const Handle& h) {
+    if (this->type() == SYMBOL && ((Symbol*)p)->sym == c)
+        *this = h;
+    if (this->type() == TERM)
+        ((Term*)p)->subst(c, h);
+}
