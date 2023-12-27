@@ -27,6 +27,10 @@ double Term::eval() const {
         return left.eval() * right.eval();
     else if (op == '/')
         return left.eval() / right.eval();
+    else {
+        cout << "Invalid operator input." << endl;
+        return 0.0;
+    }
 }
 
 void Term::subst(char c, const Handle& h) {
